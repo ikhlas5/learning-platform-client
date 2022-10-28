@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:'*',
-                element:<div className="text-red-600 mx-auto text-center" >Ops! Sorry Page not found:404!</div>
+                element:<div className="text-red-600  text-center" >Ops! Sorry Page not found:404!</div>
               }
         ]
     }
