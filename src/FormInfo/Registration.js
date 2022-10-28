@@ -3,12 +3,12 @@ import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
-import AuthContext from '../ContexProvider/AuthContext';
+import { AuthorContext } from '../ContexProvider/AuthContext';
 
 
 
 const Registration = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser} = useContext(AuthorContext)
     const navigate = useNavigate()
 
 

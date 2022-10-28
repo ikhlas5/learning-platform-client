@@ -6,12 +6,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { useState } from 'react';
 import ReactTooltip from "react-tooltip";
-import AuthContext from '../../ContexProvider/AuthContext';
+import { AuthorContext } from '../../ContexProvider/AuthContext';
 
 
 
-const Header = () => {
-    const { user, logOut } = useContext(AuthContext);
+const Header = ({children}) => {
+    const { user, logOut } = useContext(AuthorContext);
+    console.log(user);
     const [mode, setMode] = useState(false);
 
 

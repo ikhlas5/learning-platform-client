@@ -1,11 +1,11 @@
 import React from 'react';
 import { useContext } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import AuthContext from '../ContexProvider/AuthContext';
+import  { AuthorContext } from '../ContexProvider/AuthContext';
 
 
 const Faq = () => {
-    const { user } = useContext(AuthContext)
+    const { user } = useContext(AuthorContext)
     return (
         <div className='w-75 mx-auto'>
             <h2 className='text-center mb-5'>Frequanci</h2>

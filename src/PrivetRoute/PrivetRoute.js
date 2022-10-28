@@ -1,13 +1,13 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import AuthContext from '../ContexProvider/AuthContext';
+import  { AuthorContext } from '../ContexProvider/AuthContext';
 
 
 const PrivetRoute = ({children}) => {
     // const {user} = useContext(AuthorContext)
     // const location = useLocation();
-    const {user} = useContext(AuthContext);
+    const {user} = useContext(AuthorContext);
     const location = useLocation();
      
      

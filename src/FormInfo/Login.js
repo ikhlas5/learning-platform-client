@@ -5,13 +5,13 @@ import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import AuthContext from '../ContexProvider/AuthContext';
+import  { AuthorContext } from '../ContexProvider/AuthContext';
 
 
 const Login = () => {
 
     const [error, setError] = useState(``);
-    const {userSingIn,providerLogIn,providerGitHub} = useContext(AuthContext)
+    const {userSingIn,providerLogIn,providerGitHub} = useContext(AuthorContext)
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider()
     const navigate = useNavigate();
