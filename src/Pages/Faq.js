@@ -14,7 +14,7 @@ const Faq = () => {
                     <Accordion.Header>What you learn this Website ?</Accordion.Header>
                     <Accordion.Body>
                        <p>
-                            <span className='fw-bold'>onlineeduCare</span>
+                            <span className='fw-bold'>Programming King</span>
                             This is a learning website. you can learn and get knowladge in this platfrom
                             this have html,css, bootstrap,react js,javascript,node js
                             allready you can know that is a learning website so you can purcess the the code

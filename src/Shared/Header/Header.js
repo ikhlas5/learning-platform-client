@@ -39,12 +39,12 @@ const Header = ({children}) => {
                         
 
                             <Nav.Item >
-                                <Nav.Link as={Link} to="./home" eventKey="" title="Home" >
+                                <Nav.Link as={Link} to="./home" eventKey="category" title="Home" >
                                    Home
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item >
-                                <Nav.Link as={Link} to="./courses" eventKey="/home" title="courses" >
+                                <Nav.Link as={Link} to="./courses" eventKey="category" title="courses" >
                                     Courses
                                 </Nav.Link>
                             </Nav.Item>
