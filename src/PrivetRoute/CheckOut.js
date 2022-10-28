@@ -6,7 +6,7 @@ import { useLoaderData } from 'react-router-dom';
     console.log(data)
     return (
         <div>
-            <h2> Checkout Your Premium course</h2>
+            <h2 className='text-center'> Checkout Your Premium course</h2>
         </div>
     );
  };
