@@ -8,9 +8,9 @@ const SingleCart = ({course}) => {
     const { name, description,id,image } = course;
  
     return (
-        <div className='mx-auto '>
-               <Card className='mt-5'  >
-                <Card.Img style={{width: "100%",height: "400px"}} variant="top" src={image} />
+        <div className='mx-auto  '>
+               <Card className='mt-5 shadow-lg border-none '  >
+                <Card.Img className='object-cover' style={{width: "100%",height: "200px"}} variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>

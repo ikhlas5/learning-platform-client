@@ -1,13 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav, Navbar, Button, Image, Container, } from "react-bootstrap";
-import { Link, useNavigate } from 'react-router-dom';
-// import { FaStamp } from "react-icons/fa";
+import { Link,  useNavigate } from 'react-router-dom';
+import { FaStamp } from "react-icons/fa";
 import { useContext } from 'react';
 import { useState } from 'react';
 import ReactTooltip from "react-tooltip";
 import { AuthorContext } from '../../ContexProvider/AuthContext';
-
+import { BsFillMoonFill } from "react-icons/bs";
 
 
 const Header = ({children}) => {
@@ -32,13 +32,19 @@ const Header = ({children}) => {
         <div style={{ marginBottom: '67px', width: '80%' }}>
             <Container>
                 <Navbar collapseOnSelect expand="lg" fixed="top" bg="success" variant="dark" >
-                    <Navbar.Brand className='ms-3' as={Link} to="/">OnlineEduCare</Navbar.Brand>
+                    <Navbar.Brand className='ms-3' as={Link} to="/">Programming King</Navbar.Brand>
                     <Navbar.Toggle className='me-3' aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' justify-content-end me-4'>
                         <Nav className='ms-3 me-3' activeKey={window.location.pathname} variant="pills">
+                        
 
                             <Nav.Item >
-                                <Nav.Link as={Link} to="./courses" eventKey="/home" title="courses">
+                                <Nav.Link as={Link} to="./home" eventKey="" title="Home" >
+                                   Home
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item >
+                                <Nav.Link as={Link} to="./courses" eventKey="/home" title="courses" >
                                     Courses
                                 </Nav.Link>
                             </Nav.Item>
@@ -88,9 +94,10 @@ const Header = ({children}) => {
                                 }
                             </>
                             <>
-                                <button className='bg-dark text-light ps-2 pe-2 roundedCircle' variant="success" onClick={handleToogle}>
+                                <button className='bg-dark text-light ps-2 pe-2 rounded' variant="success" onClick={handleToogle}>
                                     {mode ? 'dark' : 'light'}
-                                </button></>
+                                </button>
+                                </>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

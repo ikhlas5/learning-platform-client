@@ -11,8 +11,8 @@ const CourseDSetails = () => {
     return (
         <div  style={{ width: '80%',margin: '0 auto' }}>
             <h2 className='mt-4 mb-5'>{title}</h2>
-            <Card style={{ width: '100%' }}>
-                <Card.Img style={{ width: '100%',height: '20rem' }} variant="top" src={image} />
+            <Card className='shadow-lg' style={{ width: '100%' }}>
+                <Card.Img style={{ width: '100%',height: '300px' }} variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>{ name}</Card.Title>
                     <Card.Text>

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import CourseDSetails from "../CourseDetails/CourseDetails";
 import Login from "../FormInfo/Login";
 import Registration from "../FormInfo/Registration";
+import Home from "../Home/Home";
 import Main from "../Layout/Main";
 import Blog from "../Pages/Blog";
 import Courses from "../Pages/Courses";
@@ -16,10 +17,10 @@ export const router = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Courses></Courses>
+                element:<Home></Home>
             },
             {
-                path:'course',
+                path:'courses',
                 element:<Courses></Courses>,
             },
             {
@@ -47,7 +48,11 @@ export const router = createBrowserRouter([
                 path:'checkout/:id',
                 element: <PrivetRoute><CheckOut></CheckOut></PrivetRoute>
               
-            }
+            },
+            {
+                path:'*',
+                element:<div className="text-red-600 mx-auto text-center" >Ops! Sorry Page not found:404!</div>
+              }
         ]
     }
 ])

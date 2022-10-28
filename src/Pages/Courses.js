@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import SingleCart from '../CourseDetails/SingleCart';
+import SideNav from '../SideNavition/SideNav';
 
 const Courses = () => {
      
@@ -31,7 +32,7 @@ const Courses = () => {
                     {
                         navItem.map(item => <p
                             key={item.id}>
-                            <button className='w-100 p-2 fw-bold'>
+                            <button className='w-100 text-black p-2 fw-bold'>
                                 <Link to={`/courseDetails/${item.id}`}>
                                     {item.name}
                                 </Link>
@@ -39,8 +40,9 @@ const Courses = () => {
 
                         </p>)
                     }
+                    
                 </Col>
-                <Col sm={8}>
+                <Col sm={8} className='grid grid-cols-2 '>
                 
                     {
                         courseInfo.map(course =>
