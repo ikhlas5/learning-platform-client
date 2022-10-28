@@ -5,22 +5,23 @@ import Card from 'react-bootstrap/Card';
 
 const CourseDSetails = () => {
     const data = useLoaderData();
-    const {header,img,name,details,admisionlastdate,coursefee,coursestart,Place,id} =data;
+    const {title,image,name,description,admission,price,start,loaction,id,badge} =data;
  
      
     return (
         <div  style={{ width: '80%',margin: '0 auto' }}>
-            <h2 className='mt-4 mb-5'>{header}</h2>
+            <h2 className='mt-4 mb-5'>{title}</h2>
             <Card style={{ width: '100%' }}>
-                <Card.Img style={{ width: '100%',height: '20rem' }} variant="top" src={ img} />
+                <Card.Img style={{ width: '100%',height: '20rem' }} variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>{ name}</Card.Title>
                     <Card.Text>
-                        { details}
-                        <h6 className='mt-4'>Addmision Last Date {admisionlastdate}</h6>
-                        <h6>Course Fee : { coursefee}</h6>
-                        <h6>Course start :{ coursestart}</h6>
-                        <h6>Place :{ Place}</h6>
+                        { description}
+                        <h6 className='mt-4'>Addmision Last Date {admission}</h6>
+                        <h6>Course Fee : { price}</h6>
+                        <h6>Course start :{ start}</h6>
+                        <h6>Place :{ loaction}</h6>
+                        <p>Badge:{badge}</p>
                     </Card.Text>
                     <Button className='bg-dark'variant="primary">
                         <Link to={`/checkout/${ id}`}>Premium</Link> 

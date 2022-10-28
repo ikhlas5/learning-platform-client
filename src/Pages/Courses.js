@@ -18,7 +18,7 @@ const Courses = () => {
  
     //nav item  
     useEffect(() => {
-        fetch(`http://localhost:5000/coursecategories`)
+        fetch(`http://localhost:5000/courseCatagories`)
             .then(res => res.json())
             .then(data => setNavItem(data))
     }, [])
