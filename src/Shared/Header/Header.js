@@ -1,18 +1,17 @@
 import React from 'react';
-// import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav, Navbar, Button, Image, Container, } from "react-bootstrap";
 import { Link, useNavigate } from 'react-router-dom';
-import { FaStamp } from "react-icons/fa";
-import { AuthorContext } from '../../ContextProvider/AuthContext';
+// import { FaStamp } from "react-icons/fa";
 import { useContext } from 'react';
 import { useState } from 'react';
 import ReactTooltip from "react-tooltip";
+import AuthContext from '../../ContexProvider/AuthContext';
 
 
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthorContext);
+    const { user, logOut } = useContext(AuthContext);
     const [mode, setMode] = useState(false);
 
 
