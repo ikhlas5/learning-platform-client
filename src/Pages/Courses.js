@@ -42,7 +42,7 @@ const Courses = () => {
                     }
                     
                 </Col>
-                <Col sm={8} className='grid grid-cols-2 '>
+                <Col sm={8} className='grid md:grid-cols-2 gap-4'>
                 
                     {
                         courseInfo.map(course =>
