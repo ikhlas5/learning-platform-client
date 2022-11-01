@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './Routes/Routes';
+
 
 function App() {
   return (
@@ -10,5 +11,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

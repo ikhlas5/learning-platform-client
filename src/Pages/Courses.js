@@ -33,9 +33,9 @@ const Courses = () => {
                     {
                         navItem.map(item => <p
                             key={item.id}>
-                            <button className='w-100 bg-orange-600 p-2 fw-bold'>
-                                <Link  to={`/courseDetails/${item.id}`}>
-                                    {item.name}
+                            <button className='w-100 bg-slate-400 shadow-xl  p-2 fw-bold'>
+                                <Link className='text-orange-700' to={`/courseDetails/${item.id}`}>
+                                    {item.course}
                                 </Link>
                             </button>
 

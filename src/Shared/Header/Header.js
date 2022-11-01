@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav, Navbar, Button, Image, Container, } from "react-bootstrap";
 import { Link,  useNavigate } from 'react-router-dom';
-import { FaStamp } from "react-icons/fa";
+import { HiMoon } from "react-icons/hi";
 import { useContext } from 'react';
 import { useState } from 'react';
 import ReactTooltip from "react-tooltip";
@@ -84,19 +84,17 @@ const Header = ({children}) => {
                                         :
                                         <>
                                             <Button variant="flush">
-                                                <Link to='/login'>Log In</Link>
+                                                <Link className='text-slate-400 hover:text-cyan-500' to='/login'>Log In</Link>
                                             </Button>
                                             <Button variant="flush">
-                                                <Link to='/regiester'>Regiester</Link>
+                                                <Link className='text-slate-400 hover:text-cyan-500' to='/regiester'>Regiester</Link>
                                             </Button>
                                         </>
 
                                 }
                             </>
-                            <>
-                                <button className='bg-dark text-light ps-2 pe-2 rounded' variant="success" onClick={handleToogle}>
-                                    {mode ? 'dark' : 'light'}
-                                </button>
+                                 <>
+                                <HiMoon className='h-10' onClick={handleToogle}>{mode ? 'dark' : 'light'}</HiMoon>
                                 </>
                         </Nav>
                     </Navbar.Collapse>
