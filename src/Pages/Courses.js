@@ -2,9 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 import SingleCart from '../CourseDetails/SingleCart';
-import SideNav from '../SideNavition/SideNav';
+
 
 const Courses = () => {
      
@@ -12,28 +13,28 @@ const Courses = () => {
     const [courseInfo, setCourseInfo] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/course`)
+        fetch(`https://b610-lerning-platform-server-side-ikhlas5.vercel.app/course`)
             .then(res => res.json())
             .then(data => setCourseInfo(data))
     }, [])
  
     //nav item  
     useEffect(() => {
-        fetch(`http://localhost:5000/courseCatagories`)
+        fetch(`https://b610-lerning-platform-server-side-ikhlas5.vercel.app/courseCatagories`)
             .then(res => res.json())
             .then(data => setNavItem(data))
     }, [])
 
     return (
-        <div className='d-grid w-75 mx-auto  '>
-            <Row>
-                <Col sm={4} className='mt-5 '>
+        <div className=' w-75 mx-auto  '>
+            <Row className='grid md:grid-cols-2'>
+                <Col sm={4} className='mt-5'>
                     
                     {
                         navItem.map(item => <p
                             key={item.id}>
-                            <button className='w-100 text-black p-2 fw-bold'>
-                                <Link to={`/courseDetails/${item.id}`}>
+                            <button className='w-100 bg-orange-600 p-2 fw-bold'>
+                                <Link  to={`/courseDetails/${item.id}`}>
                                     {item.name}
                                 </Link>
                             </button>

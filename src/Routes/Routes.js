@@ -42,12 +42,13 @@ export const router = createBrowserRouter([
             {
                 path:'courseDetails/:id',
                 element:<CourseDSetails></CourseDSetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({params}) => fetch(`https://b610-lerning-platform-server-side-ikhlas5.vercel.app/course/${params.id}`)
             },
             {
                 path:'checkout/:id',
-                element: <PrivetRoute><CheckOut></CheckOut></PrivetRoute>
-              
+                element: <PrivetRoute><CheckOut></CheckOut></PrivetRoute>,
+                loader:({params}) => fetch(`https://b610-lerning-platform-server-side-ikhlas5.vercel.app/info/${params.id}`)
+                
             },
             {
                 path:'*',
