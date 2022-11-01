@@ -16,25 +16,30 @@ const AuthContext = ({children}) => {
 
     //create new user
     const createUser =(email,password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     //user singin 
     const userSingIn =(email,password) =>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
     //user log out
     const logOut =() => {
+        setLoading(true)
         return signOut(auth)
     }
 
     //login with google
     const providerLogIn = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth,provider)
     }
     //sing in with github
     const providerGitHub = provider => {
+        setLoading(true)
         return signInWithPopup(auth,provider)
     }
 
@@ -55,7 +60,9 @@ const AuthContext = ({children}) => {
         userSingIn,
         logOut,
         providerLogIn,
-        providerGitHub}
+        providerGitHub,
+        loading
+    }
 
 
     return (
